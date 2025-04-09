@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <title>✅ To-Do Список</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 600px;
+      margin: 2rem auto;
+      background-color: #fff;
+      color: #000;
+      transition: 0.3s;
+    }
+
+    body.dark {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+
+    input[type="text"] {
+      width: 75%;
+      padding: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    button {
+      padding: 0.5rem 1rem;
+      margin: 0.2rem;
+      cursor: pointer;
+    }
+
+    body.dark input,
+    body.dark button {
+      background-color: #333;
+      color: white;
+      border: none;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem;
+      border-bottom: 1px solid #ccc;
+      background: #f9f9f9;
+    }
+
+    body.dark li {
+      background: #1f1f1f;
+    }
+
+    li span {
+      flex-grow: 1;
+      cursor: pointer;
+    }
+
+    .done {
+      text-decoration: line-through;
+      color: gray;
+      background-color: #d4edda; /* зеленуватий фон */
+    }
+
+    .deadline {
+      font-size: 0.9rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <h2>✅ Мій To-Do список</h2>
+
+  <input id="taskInput" type="text" placeholder="Нове завдання">
+  <input id="deadlineInput" type="date">
+  <button id="addBtn">Додати</button>
+
+  <div>
+    <button id="allBtn">Всі</button>
+    <button id="activeBtn">Активні</button>
+    <button id="completedBtn">Виконані</button>
+  </div>
+
+  <button id="sortBtn">Сортувати A→Я</button>
+  <button id="toggleTheme">🌙 Змінити тему</button>
+
+  <ul id="taskList"></ul>
+
+  <script src="script.js"></script>
+</body>
+</html>
